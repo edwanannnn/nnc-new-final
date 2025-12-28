@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NNC Academy | Gate to International Cruise Career</title>
+    
+    <!-- 1. TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. CONFIG: LUXURY PALETTE -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0B1120', // Deep Ocean
+                            light: '#1A2332'
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37', // Royal Gold
+                            light: '#F3E5AB',
+                            dark: '#AA8C2C'
+                        },
+                        white: '#FFFFFF',
+                        offwhite: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 1s ease-out',
+                        'slow-zoom': 'zoom 20s infinite alternate',
+                    },
+                    keyframes: {
+                        zoom: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. FONTS: Playfair Display (Luxury) & Lato (Modern) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- 4. ANIMATION LIBRARY (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- 5. ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0B1120; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        
+        .hero-overlay {
+            background: linear-gradient(to top, #0B1120 10%, rgba(11, 17, 32, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-offwhite text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-gold to-gold/70 rounded-full flex items-center justify-center text-navy font-serif font-bold text-xl shadow-lg">
+                    N
+                </div>
+                <div>
+                    <h1 class="font-serif text-white text-xl tracking-wide font-bold">NNC<span class="text-gold">.Academy</span></h1>
+                    <p class="text-[10px] text-gray-300 uppercase tracking-widest hidden md:block">Nepa Nice Cruise</p>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 text-sm text-white/90 font-medium tracking-wide">
+                <a href="#about" class="hover:text-gold transition-colors">Tentang</a>
+                <a href="#programs" class="hover:text-gold transition-colors">Program</a>
+                <a href="#career" class="hover:text-gold transition-colors">Karir</a>
+                <a href="#alumni" class="hover:text-gold transition-colors">Alumni</a>
+            </div>
+
+            <!-- CTA Button -->
+            <button onclick="window.location.href='#register'" class="bg-gold hover:bg-white hover:text-navy text-navy font-bold px-6 py-2 rounded-sm transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.4)] text-xs uppercase tracking-widest">
+                Daftar Sekarang
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Image with Ken Burns Effect -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1548291616-5c56799d543b?q=80&w=1974&auto=format&fit=crop" 
+                 class="w-full h-full object-cover animate-slow-zoom brightness-[0.6]" 
+                 alt="Luxury Cruise Ship">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
+            <div data-aos="fade-down" class="inline-block border border-gold/50 px-4 py-1 rounded-full bg-navy/30 backdrop-blur-sm mb-6">
+                <span class="text-gold text-xs uppercase tracking-[0.2em]">Premium Vocational Training</span>
+            </div>
+            
+            <h1 data-aos="fade-up" data-aos-delay="100" class="font-serif text-5xl md:text-7xl text-white font-bold leading-tight mb-6">
+                Raih Karir Global & <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold/80 to-white">Jelajahi Samudera</span>
+            </h1>
+            
+            <p data-aos="fade-up" data-aos-delay="200" class="text-gray-300 text-sm md:text-lg mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                Ubah masa depan Anda dengan pelatihan standar internasional. NNC Academy mempersiapkan Anda bekerja di kapal pesiar mewah Eropa & Amerika dengan gaji Dollar.
+            </p>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col md:flex-row gap-4 justify-center">
+                <button class="bg-gold text-navy px-8 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-lg group flex items-center justify-center gap-2">
+                    Konsultasi Gratis <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <button class="border border-white text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-navy transition-all duration-300">
+                    Lihat Program
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 animate-bounce text-gold/70">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 md:py-32 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h3 class="text-gold font-bold text-xs uppercase tracking-widest mb-4">Tentang NNC Academy</h3>
+                <h2 class="font-serif text-4xl md:text-5xl text-navy mb-6 leading-tight">Jembatan Emas Menuju <br>Karir Internasional.</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Kami bukan sekadar lembaga pelatihan. NNC (Nepa Nice Cruise) Academy adalah inkubator profesional yang membentuk karakter, keterampilan, dan mentalitas kelas dunia.
+                </p>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Dengan instruktur praktisi eks-kapal pesiar dan kurikulum yang disesuaikan dengan standar industri maritim global, kami memastikan lulusan kami siap kerja, bukan hanya siap melamar.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l-4 border-gold pl-4">
+                        <span class="block text-3xl font-serif text-navy font-bold">98%</span>
+                        <span class="text-xs text-gray-500 uppercase">Tingkat Penyaluran</span>
+                    </div>
+                    <div class="border-l-4 border-gold pl-4">
+                        <span class="block text-3xl font-serif text-navy font-bold">50+</span>
+                        <span class="text-xs text-gray-500 uppercase">Partner Global</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="fade-left">
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold z-0"></div>
+                <!-- IMAGE FIXED HERE -->
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" class="relative z-10 w-full h-[500px] object-cover shadow-2xl rounded-sm grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Training Session">
+                <div class="absolute -bottom-6 -right-6 bg-navy text-white p-6 shadow-xl z-20 max-w-xs">
+                    <p class="font-serif italic text-lg text-gold">"We create world-class hospitality professionals."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section id="programs" class="py-20 bg-navy text-white relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-gold font-bold text-xs uppercase tracking-widest mb-3">Program Unggulan</h3>
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">Pilih Jalur Karir Anda</h2>
+                <div class="w-20 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group bg-navy-light border border-white/5 p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors">
+                        <i data-lucide="utensils-crossed" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3">F&B Service</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Kuasai seni pelayanan fine dining standar bintang 5. Waiter, Assistant Waiter, & Restaurant Host.</p>
+                    <span class="text-gold text-xs uppercase font-bold flex items-center gap-2">Detail Program <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-navy-light border border-white/5 p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors">
+                        <i data-lucide="bed-double" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3">Housekeeping</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Manajemen kebersihan & kenyamanan kabin tamu VIP. Cabin Steward & Public Area Attendant.</p>
+                    <span class="text-gold text-xs uppercase font-bold flex items-center gap-2">Detail Program <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-navy-light border border-white/5 p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors">
+                        <i data-lucide="coffee" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3">Barista & Bar</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Ahli meracik kopi dan minuman internasional. Bartender & Professional Barista.</p>
+                    <span class="text-gold text-xs uppercase font-bold flex items-center gap-2">Detail Program <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                </div>
+                
+                 <!-- Card 4 -->
+                 <div class="group bg-navy-light border border-white/5 p-8 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy transition-colors">
+                        <i data-lucide="shirt" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-3">Laundry Master</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Teknik pencucian dan perawatan linen skala industri dengan mesin modern.</p>
+                    <span class="text-gold text-xs uppercase font-bold flex items-center gap-2">Detail Program <i data-lucide="arrow-right" class="w-3 h-3"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREER MAP SECTION -->
+    <section id="career" class="py-20 bg-offwhite">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-down">
+                <h3 class="text-navy font-bold text-xs uppercase tracking-widest mb-3">Roadmap Sukses</h3>
+                <h2 class="font-serif text-4xl text-navy mb-4">Peta Karir Anda</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Langkah sederhana menuju gaji Dollar dan keliling dunia.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 -translate-y-1/2 z-0"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 shadow-xl rounded-sm text-center border-t-4 border-gold" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl border-4 border-offwhite">1</div>
+                        <h4 class="font-serif text-xl font-bold text-navy mb-2">Registrasi</h4>
+                        <p class="text-sm text-gray-500">Daftar dan ikuti tes seleksi minat bakat.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 shadow-xl rounded-sm text-center border-t-4 border-gold" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl border-4 border-offwhite">2</div>
+                        <h4 class="font-serif text-xl font-bold text-navy mb-2">Intensive Training</h4>
+                        <p class="text-sm text-gray-500">3-6 Bulan pelatihan teori & praktek hotel standar.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 shadow-xl rounded-sm text-center border-t-4 border-gold" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-12 h-12 bg-navy text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl border-4 border-offwhite">3</div>
+                        <h4 class="font-serif text-xl font-bold text-navy mb-2">OJT & Sertifikasi</h4>
+                        <p class="text-sm text-gray-500">Magang di hotel berbintang & uji kompetensi.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white p-6 shadow-xl rounded-sm text-center border-t-4 border-gold" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl border-4 border-offwhite shadow-lg shadow-gold/50">4</div>
+                        <h4 class="font-serif text-xl font-bold text-navy mb-2">Interview & Fly</h4>
+                        <p class="text-sm text-gray-500">Wawancara user kapal pesiar & keberangkatan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US (KEUNGGULAN) -->
+    <section class="py-20 bg-navy relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-serif text-4xl text-white mb-8">Mengapa <span class="text-gold">NNC Academy</span> Pilihan Terbaik?</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 min-w-[48px] bg-white/10 rounded-full flex items-center justify-center text-gold">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Jaminan Penyaluran</h4>
+                            <p class="text-gray-400 text-sm">Kami mendampingi Anda hingga mendapatkan kontrak kerja. Tidak dilepas begitu saja.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 min-w-[48px] bg-white/10 rounded-full flex items-center justify-center text-gold">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Mentor Eks-Kapal Pesiar</h4>
+                            <p class="text-gray-400 text-sm">Belajar langsung dari praktisi yang berpengalaman puluhan tahun di laut.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 min-w-[48px] bg-white/10 rounded-full flex items-center justify-center text-gold">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-lg">Standar Internasional</h4>
+                            <p class="text-gray-400 text-sm">Fasilitas praktek dan materi bahasa Inggris maritim yang komprehensif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Composition -->
+            <div class="relative h-[400px] hidden md:block" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop" class="absolute top-0 right-0 w-3/4 h-3/4 object-cover rounded-sm shadow-2xl border-4 border-navy-light" alt="Cocktail">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" class="absolute bottom-0 left-0 w-2/3 h-2/3 object-cover rounded-sm shadow-2xl border-4 border-navy-light" alt="Learning">
+            </div>
+        </div>
+    </section>
+
+    <!-- HALL OF FAME (ALUMNI) -->
+    <section id="alumni" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-navy font-bold text-xs uppercase tracking-widest mb-3">Hall of Fame</h3>
+                <h2 class="font-serif text-4xl text-navy">Mereka Yang Telah Berlayar</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <!-- Alumni 1 -->
+                <div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-lg" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-2xl">🇺🇸</span>
+                            <span class="text-white font-serif font-bold text-lg">Rian Pratama</span>
+                        </div>
+                        <p class="text-gold text-xs uppercase tracking-widest">Royal Caribbean</p>
+                        <p class="text-gray-300 text-xs mt-1">Miami, USA</p>
+                    </div>
+                </div>
+
+                <!-- Alumni 2 -->
+                <div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-2xl">🇮🇹</span>
+                            <span class="text-white font-serif font-bold text-lg">Dina Lestari</span>
+                        </div>
+                        <p class="text-gold text-xs uppercase tracking-widest">Costa Cruises</p>
+                        <p class="text-gray-300 text-xs mt-1">Venice, Italy</p>
+                    </div>
+                </div>
+
+                 <!-- Alumni 3 -->
+                 <div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-2xl">🇩🇪</span>
+                            <span class="text-white font-serif font-bold text-lg">Siti Nurhaliza</span>
+                        </div>
+                        <p class="text-gold text-xs uppercase tracking-widest">AIDA Cruises</p>
+                        <p class="text-gray-300 text-xs mt-1">Hamburg, Germany</p>
+                    </div>
+                </div>
+
+                 <!-- Alumni 4 -->
+                 <div class="group relative h-80 overflow-hidden rounded-sm cursor-pointer shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-2xl">🇳🇴</span>
+                            <span class="text-white font-serif font-bold text-lg">Budi Santoso</span>
+                        </div>
+                        <p class="text-gold text-xs uppercase tracking-widest">Viking Ocean</p>
+                        <p class="text-gray-300 text-xs mt-1">Oslo, Norway</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-navy font-serif font-bold">N</div>
+                    <h2 class="font-serif text-2xl font-bold">NNC Academy</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">Lembaga pelatihan vokasi kapal pesiar terdepan dengan standar internasional. Wujudkan impian keliling dunia bersama kami.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-navy transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-navy transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-navy transition-all"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-6">Navigasi</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#about" class="hover:text-gold transition-colors">Tentang Kami</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Program Pelatihan</a></li>
+                    <li><a href="#alumni" class="hover:text-gold transition-colors">Testimoni Alumni</a></li>
+                    <li><a href="#faq" class="hover:text-gold transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-6">Kantor Pusat</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold shrink-0"></i>
+                        <span>Jl. Pemuda No. 45, Surabaya, Jawa Timur, Indonesia</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold shrink-0"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-gold shrink-0"></i>
+                        <span>admissions@nnc.academy</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2024 Nepa Nice Cruise Academy. All Rights Reserved.</p>
+            <p>Designed by Aivoric Core.</p>
+        </div>
+    </footer>
+
+    <!-- FLOATING WA BUTTON -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-bounce">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Animation
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Init Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-navy/90', 'backdrop-blur-md', 'shadow-lg');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('bg-navy/90', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
